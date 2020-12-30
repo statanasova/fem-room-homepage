@@ -1,0 +1,28 @@
+/* SETUP */
+
+html {
+    font-size: 100%; // Let the user control zoom level in the browser. Usally == 16px
+    box-sizing: border-box;
+}
+
+
+*, *::before, *::after {
+    box-sizing: inherit;    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--white);
+    font-family: 'Spartan', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 0.75rem; //12px
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--dark-gray);
+}
+
+
+
+
+
+

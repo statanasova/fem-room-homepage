@@ -1,59 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Room homepage</title>
+
+  <!-- web fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- challenge styles -->
+  <link rel="stylesheet" href="css/main.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    body {
+      background-color: darkolivegreen;
+    }
   </style>
 </head>
+
 <body>
-  Home
+  <!-- Home
   Shop
   About
-  Contact
+  Contact -->
 
-  Discover innovative ways to decorate
+  <header class="header">
+    <div class="header__logo-wrap">
+      <button id="hamburgerIcon" class="header__hamburger" aria-label="Open the menu">
+        <img src="images/icon-hamburger.svg" alt="hamburger icon" aria-hidden="true">
+      </button>
 
-  We provide unmatched quality, comfort, and style for property owners across the country. 
-  Our experts combine form and function in bringing your vision to life. Create a room in your 
-  own style with our collection and make your property a reflection of you and what you love.
 
-  Shop now
+      <img src="images/logo.svg" alt="room logo" class="header__logo">
+    </div>
 
-  We are available all across the globe
+    <div id="navWrap" class="header__nav-wrap">
+      <button id="closeIcon" class="header__close" aria-label="Close the menu">
+        <img src=" images/icon-close.svg" alt="close icon" aria-hidden="true">
+      </button>
+      <nav>
+        <a href="#" class="header__link">Home</a>
+        <a href="#" class="header__link">shop</a>
+        <a href="#" class="header__link">about</a>
+        <a href="#" class="header__link">contact</a>
+      </nav>
+    </div>
 
-  With stores all over the world, it's easy for you to find furniture for your home or place of business. 
-  Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
-  store locator. Any questions? Don't hesitate to contact us today.
+    <div id="overlay" class="header__overlay">
+    </div>
+  </header>
 
-  Shop now
+  <section class="slider">
+    <div class="slider__item slider__item--active">
 
-  Manufactured with the best materials
+      <picture id="sliderPicture" class="slider__picture">
+        <source srcset="/images/desktop-image-hero-1.jpg" media="(min-width: 500px)" />
+        <img class="slider__image" src="/images/mobile-image-hero-1.jpg"
+          alt="Modern interior - Chairs and Table with a Bonsai Tree" />
+      </picture>
 
-  Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
-  to ensure that every product is made as perfect and as consistent as possible. With three decades of 
-  experience in this industry, we understand what customers want for their home and office.
 
-  Shop now
 
-  About our furniture
+      <div id="sliderInfo" class="slider__info">
+        <div id="sliderAnimation" class="slider__animation">
+          <h2 id="sliderHeading" class="slider__heading">Discover innovative ways to decorate</h2>
+          <p id="sliderText" class="slider__text">We provide unmatched quality, comfort, and style for property owners
+            across the country.
+            Our experts combine form and function in bringing your vision to life. Create a room in your own style with
+            our collection and make your property a reflection of you and what you love.</p>
+          <a class="slider__link" href="#">
+            Shop now
+            <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                fill="#000" fill-rule="nonzero" />
+            </svg>
+          </a>
+        </div>
+        <div class="slider__buttons">
+          <button id="sliderButtonPrev" class="slider__button slider__button--prev" aria-label="Previous slide"><img
+              src="images/icon-angle-left.svg" alt=""></button>
 
-  Our multifunctional collection blends design and function to suit your individual taste.
-  Make each room unique, or pick a cohesive theme that best express your interests and what
-  inspires you. Find the furniture pieces you need, from traditional to contemporary styles
-  or anything in between. Product specialists are available to help you create your dream space.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+          <button id="sliderButtonNext" class="slider__button slider__button--next" aria-label="Next slide"><img
+              src="images/icon-angle-right.svg" alt=""></button>
+        </div>
+
+      </div>
+    </div>
+
+    </div>
+  </section>
+
+
+  <section class="about">
+
+    <img class="about__image" src="images/image-about-dark.jpg" alt="Bedroom with a coffe table and two chairs">
+
+    <div class="about__info">
+
+      <h3 class="about__heading">About our furniture</h3>
+
+      <div class="about__text">
+        Our multifunctional collection blends design and function to suit your individual taste.
+        Make each room unique, or pick a cohesive theme that best express your interests and what
+        inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+        or anything in between. Product specialists are available to help you create your dream space.
+      </div>
+
+    </div>
+
+    <img class="about__image" src="images/image-about-light.jpg" alt="Modern style white chair">
+
+  </section>
+
+
+  <!-- <section class="slider">
+    <div class="slider__item">
+      <img src="images/desktop-image-hero-1.jpg" alt="Modern interior with a Bonsai tree" class="slider__image">
+
+      <div class="slider__info">
+        <h2 class="slider__heading">Discover innovative ways to decorate.</h2>
+        <p class="slider__text">We provide unmatched quality, comfort, and style for property owners across the country.
+          Our experts combine form and function in bringing your vision to life. Create a room in your own style with
+          our collection and make your property a reflection of you and what you love.</p>
+        <a class="slider__link" href="#">Shop now</a>
+      </div>
+    </div> -->
+
+  <!-- <div class="slider__item">
+      <img src="images/mobile-image-hero-2.jpg" alt="Three chairs in pastel colors" class="slider__image">
+
+      <div class="slider__info">
+        <h2 class="slider__heading">We are available all across the globe</h2>
+        <p class="slider__text">With stores all over the world, it's easy for you to find furniture for your home or
+          place
+          of business.
+          Locally, we’re in most major cities throughout the country. Find the branch nearest you using our
+          store locator. Any questions? Don't hesitate to contact us today.</p>
+        <a class="slider__link" href="#">Shop now</a>
+      </div>
+    </div> -->
+
+  <!-- <div class="slider__item">
+      <img src="images/mobile-image-hero-3.jpg" alt="Foldable black metal chair" class="slider__image">
+
+      <div class="slider__info">
+        <h2 class="slider__heading">Manufactured with the best materials</h2>
+        <p class="slider__text">Our modern furniture store provide a high level of quality. Our company has invested in
+          advanced technology
+          to ensure that every product is made as perfect and as consistent as possible. With three decades of
+          experience in this industry, we understand what customers want for their home and office.</p>
+        <a class="slider__link" href="#">Shop now</a>
+
+      </div>
+    </div> -->
+
+  <!-- </section>
+
+  <section class="about">
+
+    <img class="about__image" src="images/image-about-dark.jpg" alt="Bedroom with a coffe table and two chairs">
+
+    <div class="about__info">
+
+      <h3 class="about__heading">About our furniture</h3>
+
+      <div class="about__text">
+        Our multifunctional collection blends design and function to suit your individual taste.
+        Make each room unique, or pick a cohesive theme that best express your interests and what
+        inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+        or anything in between. Product specialists are available to help you create your dream space.
+      </div>
+
+    </div>
+
+    <img class="about__image" src="images/image-about-light.jpg" alt="Modern style white chair">
+
+  </section> -->
+
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://statanasova.com">Stanimira Atanasova</a>.
+  </div> -->
+
+  <script src="js/main.js"></script>
+  <script src="js/slider.js"></script>
 </body>
+
 </html>

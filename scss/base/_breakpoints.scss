@@ -1,0 +1,58 @@
+/// Mixin to manage responsive breakpoints
+/// adapted from Hugo Giraudel & Coder Coder
+
+$breakpoints-up: (
+  'xsmall' : 500px,  
+  'small'  : 768px,
+  'medium' : 992px,
+  'large'  : 1200px,
+  'xlarge' : 1500px
+);
+
+$breakpoints-down: (
+  'xsmall' : 499px,  
+  'small'  : 767px,
+  'medium' : 991px,
+  'large'  : 1199px,
+  'xlarge' : 1499px
+);
+
+/// min-width queries
+
+@mixin breakpoint-up($breakpoint) {
+  // Retrieves the value from the key
+  $value: map-get($breakpoints-up, $breakpoint);
+
+  // Prints a media query based on the value
+  @media (min-width: $value) {
+    @content;
+  }
+}
+
+
+/// max-width queries
+
+@mixin breakpoint-down($breakpoint) {
+  // Retrieves the value from the key
+  $value: map-get($breakpoints-down, $breakpoint);
+
+  // Prints a media query based on the value
+  @media (max-width: $value) {
+    @content;
+  }
+}
+
+
+// USAGE
+
+// .selector {
+//    margin-top: 0;
+//    font-size: 1.802rem;
+
+//    @include breakpoint-up(large) {
+//        margin-top: 0;
+//        font-size: 2.488rem;
+//    }
+// }
+
+

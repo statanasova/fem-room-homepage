@@ -1,0 +1,58 @@
+/* ABOUT */
+
+.about {
+
+    display: flex;
+    flex-direction: column;
+    
+
+    @include breakpoint-up(small) {
+        flex-direction: row;
+        min-height: 12.75rem;
+        height: 30vh;
+
+    }
+
+    &__image {
+        min-width: 0;
+        object-fit: cover;
+        flex-grow: 1;
+        flex-shrink: 3;
+        flex-basis: auto;
+    }
+    
+    
+    &__info {
+        padding: 3.875rem 2rem; 
+        background-color: var(--white);
+
+        @include breakpoint-up(small) {
+            padding: 2rem 3rem;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 520px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+
+    }
+
+    &__heading {
+        font-size: 0.8125rem;
+        color: var(--black);
+        font-weight: 700;
+        margin-bottom: 1.25rem;
+                
+        letter-spacing: 4px;
+        word-spacing: 4px;
+        text-transform: uppercase;        
+
+    }
+
+    &__text {
+        line-height: 1.7;
+    }
+}
