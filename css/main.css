@@ -156,12 +156,18 @@ body.no-overflow {
 }
 
 .header__link:not(:last-child) {
-  margin-right: 1.875rem;
+  margin-right: 1rem;
 }
 
 .header__link:focus {
   outline-offset: .5rem;
   outline: 1px dotted var(--dark-gray);
+}
+
+@media (min-width: 350px) {
+  .header__link:not(:last-child) {
+    margin-right: 1.875rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -427,7 +433,7 @@ body.no-overflow {
 
 @media (min-width: 992px) {
   .slider__button {
-    padding: 1.25rem 1.455rem;
+    padding: 1.25rem 1.61rem;
   }
 }
 
@@ -486,9 +492,16 @@ body.no-overflow {
   color: var(--black);
   font-weight: 700;
   margin-bottom: 1.25rem;
-  letter-spacing: 4px;
-  word-spacing: 4px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .about__heading {
+    letter-spacing: 4px;
+    word-spacing: 4px;
+  }
 }
 
 .about__text {

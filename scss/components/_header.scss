@@ -131,12 +131,18 @@ body.no-overflow {
         text-decoration: none;
 
         &:not(:last-child) {
-            margin-right: 1.875rem;
+            margin-right: 1rem;
         }
 
         &:focus {  
             outline-offset: .5rem; 
             outline: 1px dotted var(--dark-gray);
+        }
+
+        @include breakpoint-up(tiny) {
+            &:not(:last-child) {
+                margin-right: 1.875rem;
+            }
         }
 
         @include breakpoint-up(medium) {
