@@ -15,4 +15,4 @@ Users should be able to:
 
 ## Solution
 
-[Link to live solution page] ()
+[Link to live solution page] (https://room-homepage.fem.statanasova.com)
