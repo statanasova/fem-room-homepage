@@ -1,0 +1,39 @@
+*** header and nav section ***
+
+Accessibility for Hamburger Menu
+https://medium.com/@linlinghao/accessibility-for-hamburger-menu-a37fa9617a89
+
+Accessible and Keyboard-Friendly Hamburger Menu
+https://www.impressivewebs.com/accessible-keyboard-friendly-hamburger-menu-slide-out-navigation/
+
+Flexbox and absolute positioning [for header positioning]
+https://chenhuijing.com/blog/flexbox-and-absolute-positioning/
+
+Centering Percentage Width/Height Elements [for menu underlines on large screens]
+https://css-tricks.com/centering-percentage-widthheight-elements/
+
+Disable Scrolling on Body [for an open mobile menu with an overlay]
+https://stackoverflow.com/questions/28411499/disable-scrolling-on-body
+
+
+*** slider section ***
+
+A Guide to the Responsive Images Syntax in HTML [for art direction of slider images]
+https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/
+
+Document: transitionend event [for detecting fade-out end and only then updating the slider's content]
+https://developer.mozilla.org/en-US/docs/Web/API/Document/transitionend_event
+
+Detecting the End of CSS Transition Events in JavaScript [transtionend event name for different browsers]
+https://medium.com/better-programming/detecting-the-end-of-css-transition-events-in-javascript-8653ae230dc7
+
+
+*** about section ***
+
+Flex items and min-width:0 [for images on both sides to scale]
+https://dfmcphee.com/flex-items-and-min-width-0/
+
+*** BEM ***
+
+BEM by Example
+https://seesparkbox.com/foundry/bem_by_example
