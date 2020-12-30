@@ -24,6 +24,9 @@ https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/
 Document: transitionend event [for detecting fade-out end and only then updating the slider's content]
 https://developer.mozilla.org/en-US/docs/Web/API/Document/transitionend_event
 
+Detecting the End of CSS Transition Events in JavaScript [transtionend event name for different browsers]
+https://medium.com/better-programming/detecting-the-end-of-css-transition-events-in-javascript-8653ae230dc7
+
 
 *** about section ***
 

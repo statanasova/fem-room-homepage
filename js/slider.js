@@ -33,6 +33,24 @@
   
   const prevButton = document.querySelector('#sliderButtonPrev');
   const nextButton = document.querySelector('#sliderButtonNext');
+
+  function getTransitionEndEventName() {
+    var transitions = {
+      'WebkitTransition' :'webkitTransitionEnd',
+      'MozTransition'    :'transitionend',
+      'MSTransition'     :'msTransitionEnd',
+      'OTransition'      :'oTransitionEnd',
+      'transition'       :'transitionEnd'
+     }
+    let bodyStyle = document.body.style;
+    for(let transition in transitions) {
+        if(bodyStyle[transition] != undefined) {
+            return transitions[transition];
+        } 
+    }
+  }
+
+  console.log(getTransitionEndEventName());
   
   currentIndex = 0;
   
@@ -64,14 +82,14 @@
   function buttonHandler(e) {
     sliderPicture.classList.add('fade-out');
     sliderAnimation.classList.add('fade-out');
-    sliderAnimation.addEventListener('transitionend', afterFade);
+    sliderAnimation.addEventListener(getTransitionEndEventName(), afterFade);
     
     function afterFade(ev) {
-      if(e.toElement.id === 'sliderButtonPrev' || e.target.parentNode.id === 'sliderButtonPrev') {
+      if(e.target.id === 'sliderButtonPrev' || e.target.parentNode.id === 'sliderButtonPrev') {
         var slide = prevSlide();
       }
 
-      if(e.toElement.id === 'sliderButtonNext' || e.target.parentNode.id === 'sliderButtonNext') {
+      if(e.target.id === 'sliderButtonNext' || e.target.parentNode.id === 'sliderButtonNext') {
         var slide = nextSlide();
       }
 
@@ -79,7 +97,7 @@
       
       sliderPicture.classList.remove('fade-out');
       sliderAnimation.classList.remove('fade-out');      
-      sliderAnimation.removeEventListener('transitionend', afterFade);
+      sliderAnimation.removeEventListener(getTransitionEndEventName(), afterFade);
     }
     
   }

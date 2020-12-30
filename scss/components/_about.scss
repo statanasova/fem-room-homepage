@@ -8,7 +8,7 @@
 
     @include breakpoint-up(small) {
         flex-direction: row;
-        min-height: 12.75rem;
+        min-height: 14.75rem;
         height: 30vh;
 
     }
@@ -26,6 +26,10 @@
         padding: 3.875rem 2rem; 
         background-color: var(--white);
 
+        @include breakpoint-up(xsmall) {
+            padding: 3.875rem 3.5rem;
+        }
+
         @include breakpoint-up(small) {
             padding: 2rem 3rem;
             flex-grow: 1;
@@ -37,7 +41,13 @@
             justify-content: center;
         }
         
+        
 
+    }
+
+    &__info-wrap {
+        max-width: 35rem;
+        margin: auto;
     }
 
     &__heading {
